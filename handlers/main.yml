@@ -1,0 +1,9 @@
+---
+# handlers file for ansible-role-smtpdebuggingserver
+
+- name: Restart smtp_debugging_server service
+  systemd:
+    state: restarted
+    daemon_reload: yes
+    enabled: yes
+    name: smtp_debugging_server.service

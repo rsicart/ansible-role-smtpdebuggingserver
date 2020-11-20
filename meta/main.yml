@@ -1,0 +1,15 @@
+galaxy_info:
+  author: R. Sicart
+  description: Configures a fake smtp server as a systemd service
+  license: GPL-3.0-only
+  min_ansible_version: 2.9
+  platforms:
+  - name: Debian
+    versions:
+    - buster
+  galaxy_tags:
+  - python
+  - smtp
+  - debug
+  - systemd
+dependencies: []

@@ -1,0 +1,7 @@
+---
+# defaults file for ansible-role-smtpdebuggingserver
+
+smtp_debugging_server_systemd_user: root
+smtp_debugging_server_systemd_type: simple
+smtp_debugging_server_systemd_host: localhost
+smtp_debugging_server_systemd_port: 8025

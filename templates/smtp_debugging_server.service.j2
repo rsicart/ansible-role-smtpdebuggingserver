@@ -1,0 +1,25 @@
+{{ ansible_managed | comment }}
+
+[Unit]
+Description=Python Smtp DebuggingServer
+Wants=network.target
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/env python3 -m smtpd -c DebuggingServer -n {{ smtp_debugging_server_host }}:{{ smtp_debugging_server_port }}
+
+# Disable Python's buffering of STDOUT and STDERR, so that output from the
+# service shows up immediately in systemd's logs
+Environment=PYTHONUNBUFFERED=1
+
+# Automatically restart the service if it crashes
+Restart=on-failure
+
+# Our service will notify systemd once it is up and running
+Type={{ smtp_debugging_server_systemd_type }}
+
+# Use a dedicated user to run our service
+User={{ smtp_debugging_server_systemd_user }}
+
+[Install]
+WantedBy=multi-user.target
