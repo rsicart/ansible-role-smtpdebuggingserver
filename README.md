@@ -1,5 +1,5 @@
-Role Name
-=========
+Ansible Role: smtpdebuggingserver
+=================================
 
 Configures a fake smtp server as a systemd service.
 
