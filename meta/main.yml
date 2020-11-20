@@ -1,5 +1,6 @@
 galaxy_info:
-  author: R. Sicart
+  role_name: smtpdebuggingserver
+  author: rsicart
   description: Configures a fake smtp server as a systemd service
   license: GPL-3.0-only
   min_ansible_version: 2.9
