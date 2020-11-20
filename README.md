@@ -47,9 +47,21 @@ No dependencies.
 Example Playbook
 ----------------
 
+Example with default variables:
+
     - hosts: servers
       roles:
          - { role: rsicart.smtpdebuggingserver }
+
+
+Example configuring the server to listen on default ipv4 address:
+
+    - hosts: servers
+      roles:
+        - role: rsicart.smtpdebuggingserver
+      vars:
+        smtp_debugging_server_host: "{{ ansible_default_ipv4.address | default(ansible_all_ipv4_addresses[0], true) }}"
+
 
 License
 -------
