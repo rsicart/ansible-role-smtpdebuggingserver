@@ -24,7 +24,7 @@ Configure the local port to bind the server:
 
 ```
 smtp_debugging_server_port: 8025
-
+```
 
 Configure a user to run systemd service:
 
